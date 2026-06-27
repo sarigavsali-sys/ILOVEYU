@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Sreekanth ❤️ Sariga</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.page{
+display:none;
+height:100vh;
+padding-top:80px;
+}
+
+.active{
+display:block;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+margin:10px;
+}
+
+img{
+width:250px;
+border-radius:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+
+<div id="page1" class="page active">
+
+<h1>❤️ Welcome Sreekanth ❤️</h1>
+
+<h2>From Sariga</h2>
+
+<p>
+This website is made with love just for you.
+</p>
+
+<button onclick="nextPage(2)">
+Begin Our Journey →
+</button>
+
+</div>
+
+<!-- GALLERY PAGE -->
+
+<div id="page2" class="page">
+
+<h1>📸 Our Memories</h1>
+
+<img src="photo1.jpg">
+
+<br><br>
+
+<button onclick="nextPage(1)">⬅ Back</button>
+
+<button onclick="nextPage(3)">Next ➡</button>
+
+</div>
+
+<!-- TIMELINE PAGE -->
+
+<div id="page3" class="page">
+
+<h1>📅 Our Timeline</h1>
+
+<p>❤️ Love Started : 24-02-2025</p>
+
+<p>🤗 Last Meet : 02-06-2026</p>
+
+<p>💕 Forever Together</p>
+
+<button onclick="nextPage(2)">⬅ Back</button>
+
+<button onclick="nextPage(4)">Next ➡</button>
+
+</div>
+
+<!-- LETTER PAGE -->
+
+<div id="page4" class="page">
+
+<h1>💌 Love Letter</h1>
+
+<button onclick="showLetter()">
+Open Letter
+</button>
+
+<p id="letter"></p>
+
+<button onclick="nextPage(3)">⬅ Back</button>
+
+<button onclick="nextPage(5)">Next ➡</button>
+
+</div>
+
+<!-- QUIZ PAGE -->
+
+<div id="page5" class="page">
+
+<h1>🎮 How Well Do You Know Me?</h1>
+
+<p>Why do I love you?</p>
+
+<button onclick="correct()">
+Because you treat me like a baby ❤️
+</button>
+
+<button onclick="wrong()">
+Because of my hairstyle 😆
+</button>
+
+<p id="result"></p>
+
+<button onclick="nextPage(4)">⬅ Back</button>
+
+<button onclick="nextPage(6)">Next ➡</button>
+
+</div>
+
+<!-- SURPRISE PAGE -->
+
+<div id="page6" class="page">
+
+<h1>🎁 Final Surprise</h1>
+
+<button onclick="surprise()">
+Click Me ❤️
+</button>
+
+<h2 id="final"></h2>
+
+</div>
+
+<script>
+
+function nextPage(page){
+
+let pages=document.querySelectorAll('.page');
+
+pages.forEach(p=>{
+p.classList.remove('active');
+});
+
+document.getElementById(
+'page'+page
+).classList.add('active');
+}
+
+function showLetter(){
+
+document.getElementById('letter')
+.innerHTML=
+"My Dear Sreekanth ❤️<br><br>Thank you for always making me feel special. Even when we are apart, you are always in my heart.";
+}
+
+function correct(){
+
+document.getElementById('result')
+.innerHTML=
+"Correct ❤️";
+}
+
+function wrong(){
+
+document.getElementById('result')
+.innerHTML=
+"Wrong 😆 Try Again";
+}
+
+function surprise(){
+
+document.getElementById('final')
+.innerHTML=
+"I LOVE YOU FOREVER ❤️<br><br>— Sariga";
+}
+
+</script>
+
+</body>
+</html>
