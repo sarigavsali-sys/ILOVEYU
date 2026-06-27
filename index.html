@@ -101,15 +101,29 @@ Begin Our Journey →
 
 <!-- LETTER PAGE -->
 
+<!-- LOVE LETTER PAGE -->
+
 <div id="page4" class="page">
 
-<h1>💌 Love Letter</h1>
+<h1>💌 Letter For My Kunjaaa 💌</h1>
 
 <button onclick="showLetter()">
-Open Letter
+Open My Letter ❤️
 </button>
 
-<p id="letter"></p>
+<br><br>
+
+<p id="letter" style="
+max-width:700px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+padding:20px;
+background:rgba(255,255,255,0.2);
+border-radius:20px;">
+</p>
+
+<br>
 
 <button onclick="nextPage(3)">⬅ Back</button>
 
@@ -117,6 +131,28 @@ Open Letter
 
 </div>
 
+<script>
+
+function showLetter(){
+
+document.getElementById("letter").innerHTML =
+
+"Dear Kunjaaa ❤️,<br><br>" +
+
+"Long distance is just a part of our journey, not the end of our story. Every day and every minute I miss you. I miss your presence, your voice, your smile, and all the little moments we share together. 🥺❤️<br><br>" +
+
+"Even though miles separate us, my heart always feels close to you. Every memory with you is special, and every day I look forward to the moment we meet again. ✨<br><br>" +
+
+"One day we will be together, holding hands, laughing, creating beautiful memories, and enjoying every moment with full hearts. Until then, I will keep loving you, missing you, and cherishing you. 💕<br><br>" +
+
+"Thank you for always treating me like a baby and making me feel loved and cared for. You are my comfort, my happiness, and my favorite person. 🤗❤️<br><br>" +
+
+"I love you daaaaaa ❤️🥺✨<br><br>" +
+
+"Forever Yours,<br><b>Sariga ❤️</b>";
+}
+
+</script>
 <!-- QUIZ PAGE -->
 
 <div id="page5" class="page">
@@ -130,7 +166,7 @@ Because you treat me like a baby ❤️
 </button>
 
 <button onclick="wrong()">
-Because of my hairstyle 😆
+Because of your hairstyle 😆
 </button>
 
 <p id="result"></p>
@@ -157,17 +193,45 @@ Click Me ❤️
 
 <script>
 
-function nextPage(page){
+function surprise(){
 
-let pages=document.querySelectorAll('.page');
+document.getElementById('final').innerHTML =
 
-pages.forEach(p=>{
-p.classList.remove('active');
-});
+"🐼 Roses are red,<br>" +
 
-document.getElementById(
-'page'+page
-).classList.add('active');
+"🍫 Chocolate is sweet,<br>" +
+
+"🥺 Long distance is hard,<br>" +
+
+"But you're still my favorite treat! ❤️<br><br>" +
+
+"📱 I check my phone 100 times,<br>" +
+
+"😆 Hoping it's you,<br>" +
+
+"💕 Then I remember...<br>" +
+
+"You are probably checking yours too! 😂❤️<br><br>" +
+
+"🌍 Long distance is just a part of our journey,<br>" +
+
+"❤️ Not the end of our story.<br><br>" +
+
+"🥺 Every day and every minute I miss you,<br>" +
+
+"🤗 I miss your presence, your voice, your smile,<br>" +
+
+"💕 And all our little moments together.<br><br>" +
+
+"✨ One day we will meet again,<br>" +
+
+"💑 Hold hands, laugh together,<br>" +
+
+"❤️ And enjoy every moment with full hearts.<br><br>" +
+
+"💖 Love You Kunjaaa Daaaaaa ❤️✨<br><br>" +
+
+"— Your Sariga 💕";
 }
 
 function showLetter(){
